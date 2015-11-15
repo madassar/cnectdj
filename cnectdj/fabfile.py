@@ -7,6 +7,6 @@ def prepare_deployment(branch_name):
 def deploy():
     with lcd('/home/django/cnectdj'):
         local('git pull /home/django/dev/django/')
-        local('python manage.py migrate cnectapp')
+        #local('python manage.py migrate cnectapp')
         local('python manage.py test cnectapp')
         local('sudo service apache2 restart')
